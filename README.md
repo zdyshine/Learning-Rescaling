@@ -1,7 +1,8 @@
 # Learning-Rescaling
 
 # Learning-Rescaling
-开源的图像缩放算法  
+开源的图像缩放算法   
+图像缩放是一种常用的双向操作，首先将高分辨率图像降采样以适应各种显示屏幕或便于存储和带宽使用，然后将相应的低分辨率图像上采样以恢复原始分辨率或放大图像中的细节。
 
 ## 目录
   - [1. Learning-Rescaling](#1-Learning-Rescaling)
@@ -32,8 +33,15 @@
   * 简介：我们提出了一种非常轻量级的多层拉普拉斯缩放器，只需要少量可训练参数，被称为MULLER缩放器。MULLER具有带通特性，即它学会提高某些频率子带中的细节，从而有利于下游识别模型。
   * 测试结果：未运行
 
-#### 1.2 通用超分
-* WaveMixSR：
-  * paper：https://arxiv.org/pdf/2307.00430v1.pdf
-  * code：https://github.com/pranavphoenix/WaveMixSR
-  * 简介：提出了一种新的神经网络——WaveMixSR,用于基于WaveMix架构的图像超分辨率，它使用2D离散小波变换进行空间标记混合。与基于Transformer的模型不同，WaveMixSR不会将图像展开为像素/块序列。相反，它利用卷积的内积偏置以及小波变换的无损标记混合性质来实现更高的性能，同时需要较少的资源和训练数据。
+* IRN (IJCV 2022)：
+  * paper：https://arxiv.org/pdf/2210.04188.pdf
+  * code：https://github.com/pkuxmq/Invertible-Image-Rescaling
+  * 简介：提出了一种新颖的可逆框架来处理这个一般问题，它从一个新的角度建模了双向退化和恢复，即可逆双射变换。可逆性使得框架能够模型预退化时的失真信息损失，从而在后恢复过程中减轻欠定问题。
+  * 测试结果：未运行
+ 
+* InvDN (CVPR 2021)：
+  * paper：https://arxiv.org/pdf/2104.10546v1.pdf
+  * code：https://github.com/Yang-Liu1082/InvDN
+  * 简介：提出了一种可逆去噪网络(InvDN)来解决这个挑战。InvDN将含噪声的输入转换为低分辨率的干净图像和一个包含噪声的潜在表示。为了去除噪声并恢复干净图像，InvDN在反转过程中用另一个从先验分布中采样的潜在表示替换含噪声的潜在表示。
+  * 测试结果：未运行
+    
