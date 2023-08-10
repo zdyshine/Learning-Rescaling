@@ -26,6 +26,7 @@
   * code：None
   * 简介：提出了一种协作的降尺度方案 Hierarchical Collaborative Downscaling（HCD），其重点是获得图像的更好的下采样表示，而不是学习模型，该方案优化了 HR 和 LR 图像域的表示，获得了更优的下采样图片。
   * 测试结果：未运行
+  * 复现：HCD方案包括两个过程，包括协作HR生成和协作LR生成。首先迭代地优化对原始HR图像的扰动，以生成协作的HR示例。然后，得到缩小比例的图像，并生成协作LR示例。最后，可以从更好的缩小表示中得到更好的高分辨率图像。
 
 * MULLER (ICCV 2023)：
   * paper：https://arxiv.org/pdf/2304.02859.pdf
