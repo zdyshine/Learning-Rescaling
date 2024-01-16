@@ -8,7 +8,12 @@
   - [1. Learning-Rescaling](#1-Learning-Rescaling)
 
     
-###  1. <a name='Image-enhance'></a>Image-enhance
+###  1. <a name='Image-Rescaling'></a>Image-Rescaling
+* DLV-IRN (Arxiv 2023-03)：
+  * paper：https://openreview.net/pdf?id=nCwStXFDQu
+  * code：https://github.com/zqcrafts/FouriDown
+  * 简介：提出了一种新颖的傅里叶域下采样范式，简称为FouriDown，它将现有的下采样技术统一起来。
+  * 
 * DLV-IRN (Arxiv 2023-03)：
   * paper：https://arxiv.org/pdf/2303.06747.pdf
   * code：None
